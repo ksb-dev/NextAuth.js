@@ -32,7 +32,7 @@ export const useClientRegister = async (
 
         setTimeout(() => {
           setError('')
-        }, 5000)
+        }, 10000)
 
         setLoading(false)
       }

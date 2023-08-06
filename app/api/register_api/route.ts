@@ -21,7 +21,7 @@ export async function POST (request: NextRequest) {
 
   if (name.length < 3) {
     return NextResponse.json(
-      { error: 'Name should be atleast 3 characters.' },
+      { error: 'Name should contain atleast 3 characters.' },
       { status: 400 }
     )
   }
@@ -43,7 +43,7 @@ export async function POST (request: NextRequest) {
 
   if (password.length < 6) {
     return NextResponse.json(
-      { error: 'Password should be atleast 6 characters.' },
+      { error: 'Password should contain atleast 6 characters.' },
       { status: 400 }
     )
   }
