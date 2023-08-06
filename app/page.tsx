@@ -10,7 +10,7 @@ import { useSession } from 'next-auth/react'
 import { signOut } from 'next-auth/react'
 
 // hooks
-//import { useDeleteAccount } from '@/hooks/useDeleteAccount'
+import { useDeleteAccount } from '@/hooks/useDeleteAccount'
 
 // components
 import Loading from '@/components/Loading/Loading'
@@ -47,6 +47,18 @@ const page = () => {
     if (mainRef && mainRef.current) {
       mainRef.current.style.transform = 'translateX(100vw)'
       setTimeout(() => router.push('/pages/login'), 50)
+    }
+  }
+
+  const handleDeleteAccount = async () => {
+    setLoading(true)
+
+    const response = await useDeleteAccount(session)
+
+    if (response.ok) {
+      setLoading(false)
+
+      signOut()
     }
   }
 
@@ -148,10 +160,7 @@ const page = () => {
             <button className={styles.sign_out_btn} onClick={() => signOut()}>
               Logout
             </button>
-            <button
-              className={styles.delete_btn}
-              //onClick={handleDeleteAccount}
-            >
+            <button className={styles.delete_btn} onClick={handleDeleteAccount}>
               {loading ? <Loading /> : 'Delete Account'}
             </button>
           </>
