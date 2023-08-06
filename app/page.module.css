@@ -1,0 +1,62 @@
+.image,
+.no_image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid #cdcdcd;
+  object-fit: cover;
+}
+
+.no_image {
+  position: relative;
+}
+
+.user_icon {
+  position: absolute;
+  font-size: 5rem;
+  color: var(--color-2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -41%);
+}
+
+.options {
+  /* display: flex; */
+  width: 100%;
+}
+
+.sign_out_btn,
+.delete_btn {
+  border-radius: var(--border-radius);
+  /* width: 140px; */
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign_out_btn {
+  background: var(--color-2);
+  color: #fff;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.delete_btn {
+  background: red;
+  position: relative;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign_out_btn:hover,
+.delete_btn:hover {
+  filter: brightness(80%);
+}
