@@ -30,7 +30,7 @@ import { BsArrowRight } from 'react-icons/bs'
 import styles from './page.module.css'
 
 const page = () => {
-  const { data: session, status } = useSession()
+  const { data: session } = useSession()
 
   const [loading, setLoading] = useState(false)
 
@@ -39,13 +39,13 @@ const page = () => {
 
   useEffect(() => {
     if (mainRef && mainRef.current) {
-      mainRef.current.style.transform = 'translateX(0)'
+      mainRef.current.style.transform = 'scale(1)'
     }
   }, [])
 
   const goToLogin = () => {
     if (mainRef && mainRef.current) {
-      mainRef.current.style.transform = 'translateX(100vw)'
+      mainRef.current.style.transform = 'scale(0)'
       setTimeout(() => router.push('/pages/login'), 50)
     }
   }
@@ -65,7 +65,7 @@ const page = () => {
   return (
     <main
       ref={mainRef}
-      className='flex flex-col items-center justify-center mt-[5rem] text-[#555] translate-x-[-100vw] duration-100 w-[350px] mx-auto p-[2rem] border-[1px] border-[#cdcdcd]'
+      className='main flex flex-col items-center justify-center text-[#555]  w-[350px] mx-auto p-[2rem] border-[1px] border-[#cdcdcd]'
     >
       {!session && (
         <>
@@ -85,31 +85,36 @@ const page = () => {
 
           <p className='text-center mt-5 text-lg'>Using</p>
 
-          <div className='flex items-center justify-center mt-7'>
-            <p className='relative w-[40px] h-[40px] rounded-[50%] rotate-45 mx-2 bg-black'>
-              <span className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rotate-[-45deg] text-white text-[1.25rem]'>
+          <div className='flex flex-col items-center justify-center mt-7 w-[100%]'>
+            <p className='flex items-center justify-center w-[100%] h-[50px] bg-black text-white rounded-tl-[25px] rounded-tr-[25px] mb-1'>
+              <span className='text-[1.25rem] mr-2 inline-block'>
                 <SiNextdotjs />
               </span>
+              <span>Next.js</span>
             </p>
-            <p className='relative w-[40px] h-[40px] rounded-[50%] rotate-45 mx-2 bg-[#3178C6]'>
-              <span className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rotate-[-45deg] text-white text-[1rem]'>
+            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#3178C6] text-white mb-1'>
+              <span className='text-[1.25rem] mr-2 inline-block'>
                 <SiTypescript />
               </span>
+              <span>Typescript</span>
             </p>
-            <p className='relative w-[40px] h-[40px] rounded-[50%] rotate-45 mx-2 bg-[#1a202c]'>
-              <span className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rotate-[-45deg] text-white text-[1.25rem]'>
+            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#1a202c] text-white mb-1'>
+              <span className='text-[1.25rem] mr-2 inline-block'>
                 <SiPrisma />
               </span>
+              <span>Prisma</span>
             </p>
-            <p className='relative w-[40px] h-[40px] rounded-[50%] rotate-45 mx-2 bg-[#116149]'>
-              <span className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rotate-[-45deg] text-[#00ed64] text-[1.25rem]'>
+            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#116149] text-[#00ed64] mb-1'>
+              <span className='text-[1.25rem] mr-2 inline-block'>
                 <SiMongodb />
               </span>
+              <span>MongoDB</span>
             </p>
-            <p className='relative w-[40px] h-[40px] rounded-[50%] rotate-45 mx-2 bg-[#0F172A]'>
-              <span className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rotate-[-45deg] text-[#38BDF8] text-[1.25rem]'>
+            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#0F172A] text-[#38BDF8] rounded-bl-[25px] rounded-br-[25px]'>
+              <span className='text-[1.25rem] mr-2 inline-block'>
                 <SiTailwindcss />
               </span>
+              <span>Tailwind</span>
             </p>
           </div>
 
@@ -119,7 +124,7 @@ const page = () => {
 
           <button
             onClick={goToLogin}
-            className='mt-5 relative h-[40px] w-[40px] rounded-[50%] bg-[var(--color-2)] text-white hover:brightness-[90%]'
+            className='mt-5 relative h-[50px] w-[50px] rounded-[50%] bg-[var(--color-2)] text-white hover:brightness-[90%]'
           >
             <span className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
               <BsArrowRight />

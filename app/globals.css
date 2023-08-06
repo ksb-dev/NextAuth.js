@@ -14,9 +14,18 @@
   --color-1: #cdcdcd;
   --color-2: #4885ed;
 
-  --transition-1: all 0.1s ease;
+  --transition-1: all 0.3s ease;
 
   --border-1: 1px solid #cdcdcd;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
 }
 
 .title {
@@ -30,6 +39,11 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.main {
+  transform: scale(0);
+  transition: var(--transition-1);
 }
 
 /* ----- FORM (START) ----- */
@@ -63,14 +77,13 @@
 }
 
 .form_div {
-  transform: translateX(-150%);
+  transform: scale(0);
   transition: var(--transition-1);
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5rem 0;
 }
 
 .form {
@@ -105,7 +118,7 @@
 
 .input {
   margin-bottom: 1rem;
-  height: 40px;
+  height: 50px;
   padding: 0 0.5rem;
   border: none;
   width: 100%;
@@ -124,7 +137,7 @@
   color: #fff;
   border: none;
   width: 100%;
-  height: 40.5px;
+  height: 50.5px;
   letter-spacing: 1px;
 
   display: flex;
@@ -168,7 +181,7 @@
 
 .google_div,
 .github_div {
-  height: 40px;
+  height: 50px;
   border-radius: var(--border-radius);
   position: relative;
   display: flex;
@@ -193,8 +206,8 @@
 .github_icon_div {
   background: #fff;
   display: inline-block;
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   border-radius: var(--border-radius);
   position: absolute;
   left: 0;

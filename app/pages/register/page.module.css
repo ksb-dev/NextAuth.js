@@ -19,7 +19,7 @@
 .image_input::before {
   position: absolute;
   pointer-events: none;
-  top: 10px;
+  top: 15px;
   left: 16px;
   height: 20px;
   width: 20px;
@@ -30,7 +30,7 @@
 .image_input::after {
   position: absolute;
   pointer-events: none;
-  top: 7.5px;
+  top: 12.5px;
   left: 40px;
   color: #555;
   content: 'Upload File';
@@ -40,7 +40,7 @@
 
 /* file upload button */
 .image_input::file-selector-button {
-  height: 40px;
+  height: 50px;
   cursor: pointer;
   border: none;
   margin-right: 16px;

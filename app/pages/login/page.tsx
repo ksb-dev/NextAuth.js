@@ -42,7 +42,7 @@ const SignIn = () => {
     if (session) return router.push('/')
 
     if (loginFormRef && loginFormRef.current) {
-      loginFormRef.current.style.transform = 'translateX(0)'
+      loginFormRef.current.style.transform = 'scale(1)'
     }
   }, [session])
 
@@ -63,9 +63,16 @@ const SignIn = () => {
     })
   }
 
+  const backToHome = () => {
+    if (loginFormRef && loginFormRef.current) {
+      loginFormRef.current.style.transform = 'scale(0)'
+      setTimeout(() => router.push('/'), 50)
+    }
+  }
+
   const goToRegister = () => {
     if (loginFormRef && loginFormRef.current) {
-      loginFormRef.current.style.transform = 'translateX(100vw)'
+      loginFormRef.current.style.transform = 'scale(0)'
       setTimeout(() => router.push('/pages/register'), 50)
     }
   }
@@ -75,11 +82,11 @@ const SignIn = () => {
       {!session && (
         <div className='form_div' ref={loginFormRef}>
           <div className='form'>
-            <Link href='/' className='home_link'>
+            <div onClick={backToHome} className='home_link'>
               <span className='home_icon'>
                 <LiaHomeSolid />
               </span>
-            </Link>
+            </div>
             <p className='tag'>Sign In</p>
 
             <div className='input_div'>
