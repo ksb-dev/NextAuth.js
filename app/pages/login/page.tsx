@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect } from 'react'
 
 // next-router
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
 
 // hooks
 import { useCheckFields } from '@/hooks/useCheckFields'
@@ -37,7 +36,6 @@ const SignIn = () => {
   const loginFormRef = useRef<HTMLDivElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const passwordRef = useRef<HTMLInputElement>(null)
-  const errorRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (session) return router.push('/')

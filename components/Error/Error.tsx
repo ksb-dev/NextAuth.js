@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 
 // react-icons
-import { IoIosCloseCircle } from 'react-icons/io'
+import { IoIosClose } from 'react-icons/io'
 
 // styles
 import styles from './error.module.css'
@@ -39,7 +39,7 @@ const Error = ({ error, setError }: any) => {
             <span className={styles.count}>Time Left - {count}</span>
           </p>
           <span className={styles.close} onClick={() => setError('')}>
-            <IoIosCloseCircle />
+            <IoIosClose />
           </span>
         </div>
       </div>
