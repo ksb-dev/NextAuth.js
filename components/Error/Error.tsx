@@ -11,7 +11,6 @@ import styles from './error.module.css'
 const Error = ({ error, setError }: any) => {
   const [count, setCount] = useState(10)
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const errorRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     timer.current = setTimeout(() => {
@@ -32,7 +31,7 @@ const Error = ({ error, setError }: any) => {
   }, [count])
 
   return (
-    <div className={styles.error_div} ref={errorRef}>
+    <div className={styles.error_div}>
       <div className={styles.error_msg}>
         <div>{error}</div>
         <div className={styles.close_timer}>

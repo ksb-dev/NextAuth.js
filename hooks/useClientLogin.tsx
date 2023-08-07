@@ -26,10 +26,6 @@ export const useClientLogin = async ({
         setError('Incorrect Email or Password.')
 
         setLoading(false)
-
-        // setTimeout(() => {
-        //   setError('')
-        // }, 5000)
       } else {
         if (formRef && formRef.current) {
           formRef.current.style.transform = 'scale(0)'

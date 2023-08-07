@@ -37,6 +37,7 @@ const SignIn = () => {
   const loginFormRef = useRef<HTMLDivElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const passwordRef = useRef<HTMLInputElement>(null)
+  const errorRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (session) return router.push('/')
