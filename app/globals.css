@@ -221,7 +221,11 @@ body {
   width: 38px;
   border-radius: var(--border-radius-1);
   position: absolute;
-  left: 0.075rem;
+  left: 0.15rem;
+}
+
+.github_icon_div {
+  height: 37px;
 }
 
 .google_icon,
