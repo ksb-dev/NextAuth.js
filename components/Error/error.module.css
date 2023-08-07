@@ -15,7 +15,7 @@
 
 .error_msg {
   background: #fff;
-  color: tomato;
+  color: #555;
   padding: 2rem;
 
   font-weight: 500;
@@ -32,7 +32,7 @@
 }
 
 .close_timer {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@
 }
 
 .close {
-  color: #555;
+  color: red;
   font-size: 2.25rem;
   cursor: pointer;
 }
