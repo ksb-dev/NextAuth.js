@@ -86,7 +86,7 @@ const Login = () => {
                 <LiaHomeSolid />
               </span>
             </div>
-            <p className='tag'>Sign In</p>
+            <p className='tag'>Login</p>
 
             <div className='input_div'>
               <label htmlFor='email' className='label'>

@@ -25,6 +25,7 @@ import {
 } from 'react-icons/si'
 import { BiSolidUserCircle } from 'react-icons/bi'
 import { BsArrowRight } from 'react-icons/bs'
+import { IoIosCheckmarkCircle } from 'react-icons/io'
 
 // styles
 import styles from './page.module.css'
@@ -135,7 +136,12 @@ const page = () => {
 
       {session && (
         <>
-          <p className='text-[#555] mb-[1rem] text-xl'>Authenticated User</p>
+          <p className='flex items-center text-[#555] mb-[1rem] text-xl'>
+            Authenticated{' '}
+            <span className='mt-1 ml-2 text-[1.75rem] text-green-500'>
+              <IoIosCheckmarkCircle />
+            </span>
+          </p>
 
           {session.user?.image ? (
             <img
