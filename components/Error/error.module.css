@@ -16,12 +16,8 @@
 .error_msg {
   background: #fff;
   color: tomato;
-  padding: 1rem;
+  padding: 2rem;
 
-  /* position: absolute;
-  bottom: 1rem;
-  left: 1rem;
-  right: 1rem; */
   font-weight: 500;
   width: 318px;
 
@@ -52,6 +48,7 @@
   width: 120px;
   text-align: center;
   font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .close {
