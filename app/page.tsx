@@ -65,7 +65,7 @@ const page = () => {
   return (
     <main
       ref={mainRef}
-      className='main flex flex-col items-center justify-center text-[#555]  w-[350px] mx-auto p-[2rem] border-[1px] border-[#cdcdcd]'
+      className='main flex flex-col items-center justify-center text-[#555]  w-[350px] mx-auto p-[2rem]'
     >
       {!session && (
         <>
@@ -86,7 +86,7 @@ const page = () => {
           <p className='text-center mt-5 text-lg'>Using</p>
 
           <div className='flex flex-col items-center justify-center mt-7 w-[100%]'>
-            <p className='flex items-center justify-center w-[100%] h-[50px] bg-black text-white rounded-tl-[25px] rounded-tr-[25px] mb-1'>
+            <p className='flex items-center justify-center w-[100%] h-[50px] bg-black text-white rounded-tl-[var(--border-radius-1)] rounded-tr-[var(--border-radius-1)] mb-1'>
               <span className='text-[1.25rem] mr-2 inline-block'>
                 <SiNextdotjs />
               </span>
@@ -110,7 +110,7 @@ const page = () => {
               </span>
               <span>MongoDB</span>
             </p>
-            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#0F172A] text-[#38BDF8] rounded-bl-[25px] rounded-br-[25px]'>
+            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#0F172A] text-[#38BDF8] rounded-bl-[var(--border-radius-1)] rounded-br-[var(--border-radius-1)]'>
               <span className='text-[1.25rem] mr-2 inline-block'>
                 <SiTailwindcss />
               </span>
@@ -124,7 +124,7 @@ const page = () => {
 
           <button
             onClick={goToLogin}
-            className='mt-5 relative h-[50px] w-[50px] rounded-[50%] bg-[var(--color-2)] text-white hover:brightness-[90%]'
+            className='mt-5 relative h-[42px] w-[42px] rounded-[50%] bg-[var(--color-2)] text-white hover:brightness-[90%]'
           >
             <span className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>
               <BsArrowRight />

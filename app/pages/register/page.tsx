@@ -173,7 +173,7 @@ const SignUp = () => {
             </span>
           </div>
 
-          {error && <Error error={error} />}
+          {error && <Error error={error} setError={setError} />}
         </form>
       </div>
     </>

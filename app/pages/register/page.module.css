@@ -47,6 +47,7 @@
   transition: background-color 200ms;
   background: #fff;
   border: var(--border-1);
+  border-radius: var(--border-radius-1);
 }
 
 /* file upload button hover state */

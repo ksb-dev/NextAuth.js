@@ -153,7 +153,7 @@ const SignIn = () => {
             </div>
           </div>
 
-          {error && <Error error={error} />}
+          {error && <Error error={error} setError={setError} />}
         </div>
       )}
     </>

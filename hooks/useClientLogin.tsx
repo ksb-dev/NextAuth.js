@@ -27,9 +27,9 @@ export const useClientLogin = async ({
 
         setLoading(false)
 
-        setTimeout(() => {
-          setError('')
-        }, 10000)
+        // setTimeout(() => {
+        //   setError('')
+        // }, 5000)
       } else {
         if (formRef && formRef.current) {
           formRef.current.style.transform = 'scale(0)'

@@ -1,15 +1,11 @@
-import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context'
-
-export const useClientRegister = async (
-  // data: UserData,
-  // setFirstMount: React.Dispatch<React.SetStateAction<boolean>>,
-  // setLoading: React.Dispatch<React.SetStateAction<boolean>>,
-  // setError: React.Dispatch<React.SetStateAction<string>>,
-  // registerFormRef: React.RefObject<HTMLDivElement>,
-  // router: AppRouterInstance
-
-  { data, setFirstMount, setLoading, setError, formRef, router }: ClientRegister
-) => {
+export const useClientRegister = async ({
+  data,
+  setFirstMount,
+  setLoading,
+  setError,
+  formRef,
+  router
+}: ClientRegister) => {
   const { name, email, password } = data
 
   setFirstMount(true)
@@ -29,10 +25,6 @@ export const useClientRegister = async (
         const { error } = await response.json()
 
         setError(error)
-
-        setTimeout(() => {
-          setError('')
-        }, 10000)
 
         setLoading(false)
       }

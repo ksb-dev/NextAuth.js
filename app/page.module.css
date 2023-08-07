@@ -27,13 +27,13 @@
 
 .sign_out_btn,
 .delete_btn {
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-1);
   width: 100%;
   border: none;
   outline: none;
   cursor: pointer;
 
-  height: 50px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
