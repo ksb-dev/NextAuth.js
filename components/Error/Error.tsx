@@ -36,7 +36,7 @@ const Error = ({ error, setError }: any) => {
         <div>{error}</div>
         <div className={styles.close_timer}>
           <p className={styles.timer}>
-            <span className={styles.count}>Time Left - {count}</span>
+            <span className={styles.count}>Time Left : {count}s</span>
           </p>
           <span className={styles.close} onClick={() => setError('')}>
             <IoIosClose />
