@@ -14,7 +14,7 @@
   --color-1: #cdcdcd;
   --color-2: #4885ed;
 
-  --transition-1: all 0.3s ease;
+  --transition-1: all 0.15s ease;
 
   --box-shadow-1: 0 0 3px #999;
 
@@ -46,7 +46,7 @@ body {
 }
 
 .main {
-  transform: scale(0);
+  transform: translateX(-100vw);
   transition: var(--transition-1);
   box-shadow: var(--box-shadow-1);
   border-radius: var(--border-radius-1);
@@ -83,7 +83,7 @@ body {
 }
 
 .form_div {
-  transform: scale(0);
+  transform: translateX(-100vw);
   transition: var(--transition-1);
 
   display: flex;

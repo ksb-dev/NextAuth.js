@@ -41,7 +41,7 @@ const SignUp = () => {
 
   useEffect(() => {
     if (registerFormRef && registerFormRef.current) {
-      registerFormRef.current.style.transform = 'scale(1)'
+      registerFormRef.current.style.transform = 'translateX(0)'
     }
 
     if (firstMount) {
@@ -81,14 +81,14 @@ const SignUp = () => {
 
   const backToHome = () => {
     if (registerFormRef && registerFormRef.current) {
-      registerFormRef.current.style.transform = 'scale(0)'
+      registerFormRef.current.style.transform = 'translateX(100vw)'
       setTimeout(() => router.push('/'), 50)
     }
   }
 
   const goToLogin = () => {
     if (registerFormRef && registerFormRef.current) {
-      registerFormRef.current.style.transform = 'scale(0)'
+      registerFormRef.current.style.transform = 'translateX(100vw)'
       setTimeout(() => router.push('/pages/login'), 50)
     }
   }

@@ -31,7 +31,7 @@ export const useClientRegister = async ({
 
       if (response.ok) {
         if (formRef && formRef.current) {
-          formRef.current.style.transform = 'scale(0)'
+          formRef.current.style.transform = 'translateX(0)'
         }
 
         router.push('/pages/login')

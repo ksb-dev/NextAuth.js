@@ -20,7 +20,7 @@ import { FcGoogle } from 'react-icons/fc'
 
 import { signIn, useSession } from 'next-auth/react'
 
-const SignIn = () => {
+const Login = () => {
   const { data: session } = useSession()
   const router = useRouter()
 
@@ -41,7 +41,7 @@ const SignIn = () => {
     if (session) return router.push('/')
 
     if (loginFormRef && loginFormRef.current) {
-      loginFormRef.current.style.transform = 'scale(1)'
+      loginFormRef.current.style.transform = 'translateX(0)'
     }
   }, [session])
 
@@ -51,7 +51,7 @@ const SignIn = () => {
     }
   }, [data.email, data.password, firstMount, session])
 
-  const handleSignIn = async () => {
+  const handleLogin = async () => {
     useClientLogin({
       data,
       setFirstMount,
@@ -64,14 +64,14 @@ const SignIn = () => {
 
   const backToHome = () => {
     if (loginFormRef && loginFormRef.current) {
-      loginFormRef.current.style.transform = 'scale(0)'
+      loginFormRef.current.style.transform = 'translateX(100vw)'
       setTimeout(() => router.push('/'), 50)
     }
   }
 
   const goToRegister = () => {
     if (loginFormRef && loginFormRef.current) {
-      loginFormRef.current.style.transform = 'scale(0)'
+      loginFormRef.current.style.transform = 'translateX(100vw)'
       setTimeout(() => router.push('/pages/register'), 50)
     }
   }
@@ -116,7 +116,7 @@ const SignIn = () => {
               />
             </div>
 
-            <button className='submit_btn' onClick={handleSignIn}>
+            <button className='submit_btn' onClick={handleLogin}>
               {loading ? <Loading /> : 'SUBMIT'}
             </button>
 
@@ -159,4 +159,4 @@ const SignIn = () => {
   )
 }
 
-export default SignIn
+export default Login

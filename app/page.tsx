@@ -39,13 +39,13 @@ const page = () => {
 
   useEffect(() => {
     if (mainRef && mainRef.current) {
-      mainRef.current.style.transform = 'scale(1)'
+      mainRef.current.style.transform = 'translateX(0)'
     }
   }, [])
 
   const goToLogin = () => {
     if (mainRef && mainRef.current) {
-      mainRef.current.style.transform = 'scale(0)'
+      mainRef.current.style.transform = 'translateX(100vw)'
       setTimeout(() => router.push('/pages/login'), 50)
     }
   }
@@ -85,36 +85,36 @@ const page = () => {
 
           <p className='text-center mt-5 text-lg'>Using</p>
 
-          <div className='flex flex-col items-center justify-center mt-7 w-[100%]'>
-            <p className='flex items-center justify-center w-[100%] h-[50px] bg-black text-white rounded-tl-[var(--border-radius-1)] rounded-tr-[var(--border-radius-1)] mb-1'>
-              <span className='text-[1.25rem] mr-2 inline-block'>
+          <div className='flex items-center justify-center mt-7 w-[100%]'>
+            <p className='flex items-center justify-center w-[100%] h-[50px] bg-black text-white rounded-tl-[var(--border-radius-1)] rounded-bl-[var(--border-radius-1)]'>
+              <span className='text-[1.5rem] inline-block'>
                 <SiNextdotjs />
               </span>
-              <span>Next.js</span>
+              {/* <span>Next.js</span> */}
             </p>
-            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#3178C6] text-white mb-1'>
-              <span className='text-[1.25rem] mr-2 inline-block'>
+            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#3178C6] text-white'>
+              <span className='text-[1.5rem] inline-block'>
                 <SiTypescript />
               </span>
-              <span>Typescript</span>
+              {/* <span>Typescript</span> */}
             </p>
-            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#1a202c] text-white mb-1'>
-              <span className='text-[1.25rem] mr-2 inline-block'>
+            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#1a202c] text-white'>
+              <span className='text-[1.5rem] inline-block'>
                 <SiPrisma />
               </span>
-              <span>Prisma</span>
+              {/* <span>Prisma</span> */}
             </p>
-            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#116149] text-[#00ed64] mb-1'>
-              <span className='text-[1.25rem] mr-2 inline-block'>
+            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#116149] text-[#00ed64]'>
+              <span className='text-[1.6rem] inline-block'>
                 <SiMongodb />
               </span>
-              <span>MongoDB</span>
+              {/* <span>MongoDB</span> */}
             </p>
-            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#0F172A] text-[#38BDF8] rounded-bl-[var(--border-radius-1)] rounded-br-[var(--border-radius-1)]'>
-              <span className='text-[1.25rem] mr-2 inline-block'>
+            <p className='flex items-center justify-center w-[100%] h-[50px] bg-[#0F172A] text-[#38BDF8] rounded-tr-[var(--border-radius-1)] rounded-br-[var(--border-radius-1)]'>
+              <span className='text-[1.75rem] inline-block'>
                 <SiTailwindcss />
               </span>
-              <span>Tailwind</span>
+              {/* <span>Tailwind</span> */}
             </p>
           </div>
 

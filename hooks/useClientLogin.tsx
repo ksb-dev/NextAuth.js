@@ -28,7 +28,7 @@ export const useClientLogin = async ({
         setLoading(false)
       } else {
         if (formRef && formRef.current) {
-          formRef.current.style.transform = 'scale(0)'
+          formRef.current.style.transform = 'translateX(0)'
         }
 
         router.push('/')
