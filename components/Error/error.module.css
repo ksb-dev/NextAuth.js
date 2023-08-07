@@ -23,6 +23,7 @@
   left: 1rem;
   right: 1rem; */
   font-weight: 500;
+  width: 318px;
 
   display: flex;
   flex-direction: column-reverse;
