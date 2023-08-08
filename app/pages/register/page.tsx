@@ -36,6 +36,7 @@ const SignUp = () => {
   const nameRef = useRef<HTMLInputElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const passwordRef = useRef<HTMLInputElement>(null)
+  const ref = useRef<HTMLDivElement>(null)
 
   const router = useRouter()
 

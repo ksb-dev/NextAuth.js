@@ -3,12 +3,18 @@
 import { useState, useEffect, useRef } from 'react'
 
 // react-icons
-import { IoIosClose } from 'react-icons/io'
+import { IoIosClose, IoIosCloseCircleOutline } from 'react-icons/io'
 
 // styles
 import styles from './error.module.css'
 
-const Error = ({ error, setError }: any) => {
+interface IMyProps {
+  error: string
+  setError: React.Dispatch<React.SetStateAction<string>>
+}
+
+const Error = ({ error, setError }: IMyProps) => {
+  //console.log(ref)
   const [count, setCount] = useState(10)
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
@@ -39,7 +45,9 @@ const Error = ({ error, setError }: any) => {
             <span className={styles.count}>Time Left : {count}s</span>
           </p>
           <span className={styles.close} onClick={() => setError('')}>
-            <IoIosClose />
+            {/* <IoIosClose /> */}
+            {/* <IoIosCloseCircleOutline /> */}
+            Close
           </span>
         </div>
       </div>

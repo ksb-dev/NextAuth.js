@@ -136,9 +136,9 @@ const page = () => {
 
       {session && (
         <>
-          <p className='flex items-center text-[#555] mb-[1rem] text-xl'>
+          <p className='flex items-center text-[#555] mb-[2rem] text-xl'>
             Authenticated{' '}
-            <span className='mt-1 ml-2 text-[1.75rem] text-green-500'>
+            <span className='ml-2 text-[1.75rem] text-green-500'>
               <IoIosCheckmarkCircle />
             </span>
           </p>
@@ -157,11 +157,11 @@ const page = () => {
             </p>
           )}
 
-          <span className='font-bold mt-[1rem] mb-[0.5rem]'>
+          <span className='font-bold mt-[2rem] mb-[0.5rem]'>
             {session.user?.name}
           </span>
 
-          <span> {session.user?.email}</span>
+          <span className='mb-[1rem]'> {session.user?.email}</span>
         </>
       )}
 
