@@ -80,8 +80,8 @@
 
 .close_btn {
   position: absolute;
-  top: -1rem;
-  right: -1rem;
+  top: -20px;
+  left: -20px;
   background: tomato;
   cursor: pointer;
   width: 62px;
