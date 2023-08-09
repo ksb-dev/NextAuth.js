@@ -123,7 +123,7 @@ const page = () => {
         <>
           <p className='flex items-center text-[#555] mb-[2rem] text-xl'>
             Authenticated
-            <span className='ml-2 text-[1.75rem] text-green-500'>
+            <span className='ml-1 text-[1.75rem] text-green-500'>
               <IoIosCheckmarkCircle />
             </span>
           </p>
