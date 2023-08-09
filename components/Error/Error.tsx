@@ -2,6 +2,9 @@
 
 import { useState, useEffect, useRef } from 'react'
 
+// react-icons
+import { IoMdClose } from 'react-icons/io'
+
 // styles
 import styles from './error.module.css'
 
@@ -14,10 +17,12 @@ const Error = ({ error, setError }: Props) => {
   const [count, setCount] = useState(10)
   //const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const errorMsgRef = useRef<HTMLDivElement>(null)
+  const barRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setTimeout(() => {
       errorMsgRef.current!.style.transform = 'scale(1)'
+      barRef.current!.style.width = '0%'
     }, 150)
   }, [])
 
@@ -54,14 +59,20 @@ const Error = ({ error, setError }: Props) => {
     <div className={styles.error_div}>
       <div className={styles.error_msg} ref={errorMsgRef}>
         <div>{error}</div>
-        <div className={styles.close_timer}>
+        {/* <div className={styles.close_timer}>
           <p className={styles.timer}>
-            <span className={styles.count}>Time Left : {count}s</span>
+            <span className={styles.count}>Left : {count}s</span>
           </p>
           <span className={styles.close} onClick={closeError}>
             Close
           </span>
+        </div> */}
+        <div className={styles.close_btn} onClick={closeError}>
+          <span className={styles.close_icon}>
+            <IoMdClose />
+          </span>
         </div>
+        <div className={styles.bar} ref={barRef}></div>
       </div>
     </div>
   )
