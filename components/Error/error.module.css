@@ -84,8 +84,8 @@
   right: -1rem;
   background: tomato;
   cursor: pointer;
-  height: 52px;
-  width: 52px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   border: 10px solid #fff;
 }
@@ -99,7 +99,8 @@
 }
 
 .close_btn:hover {
-  transform: rotate(20deg);
+  /* transform: rotate(20deg); */
+  transform: scale(1.1);
   transition: var(--transition-1);
 }
 
