@@ -31,6 +31,9 @@
   box-shadow: 0 0 3px #999;
   border-radius: var(--border-radius-1);
   margin: 0 1rem;
+
+  transform: scale(0);
+  transition: var(--transition-1);
 }
 
 .close_timer {
@@ -46,7 +49,6 @@
   height: 42px;
   width: 120px;
   border-radius: var(--border-radius-1);
-  /* font-size: 0.8rem; */
   font-weight: 400;
   font-size: 1rem;
 

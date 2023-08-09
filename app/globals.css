@@ -15,11 +15,8 @@
   --color-2: #4885ed;
 
   --transition-1: all 0.15s ease;
-
   --box-shadow-1: 0 0 3px #999;
-
   --border-radius-1: 5px;
-
   --border-1: 1px solid #cdcdcd;
 }
 
@@ -30,26 +27,6 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
-}
-
-.title {
-  background: linear-gradient(
-    to right bottom,
-    #1cd9c5 10%,
-    #1daeeb 20%,
-    #d44be8,
-    #981ed8
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.main {
-  transform: translateX(-100vw);
-  transition: var(--transition-1);
-  box-shadow: var(--box-shadow-1);
-  border-radius: var(--border-radius-1);
 }
 
 /* ----- FORM (START) ----- */
@@ -100,7 +77,6 @@ body {
   width: 350px;
   position: relative;
   background: #fff;
-  /* outline: var(--border-1); */
   border-radius: var(--border-radius-1);
   box-shadow: var(--box-shadow-1);
 }

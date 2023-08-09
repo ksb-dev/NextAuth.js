@@ -1,3 +1,136 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #555;
+  padding: 2rem;
+  width: 350px;
+  box-shadow: var(--box-shadow-1);
+  border-radius: var(--border-radius-1);
+
+  transform: translateX(-100vw);
+  transition: var(--transition-1);
+}
+
+.paragraph {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title_text {
+  background: linear-gradient(
+    to right bottom,
+    #1cd9c5 10%,
+    #1daeeb 20%,
+    #d44be8,
+    #981ed8
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 2rem;
+  margin-left: 5px;
+}
+
+.stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.next_div,
+.typescript_div,
+.prisma_div,
+.mongo_div,
+.tailwind_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin: 0 1px;
+}
+
+.next_div {
+  background: #000;
+  color: #fff;
+  border-top-left-radius: var(--border-radius-1);
+  border-bottom-left-radius: var(--border-radius-1);
+}
+
+.typescript_div {
+  background: #3178c6;
+  color: #fff;
+}
+
+.prisma_div {
+  background: #1a202c;
+  color: #fff;
+}
+
+.mongo_div {
+  background: #116149;
+  color: #00ed64;
+}
+
+.tailwind_div {
+  background: #0b2136;
+  color: #38bdf8;
+  border-top-right-radius: var(--border-radius-1);
+  border-bottom-right-radius: var(--border-radius-1);
+}
+
+.next_icon,
+.prisma_icon {
+  font-size: 1.5rem;
+}
+
+.typescript_icon {
+  font-size: 1.25rem;
+}
+
+.mongo_icon {
+  font-size: 1.6rem;
+}
+
+.tailwind_icon {
+  font-size: 1.75rem;
+}
+
+.rightArrowBtn_div {
+  position: relative;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  background: var(--color-2);
+  color: #fff;
+}
+
+.rightArrowBtn_div:hover {
+  filter: brightness(90%);
+}
+
+.rightArrowBtn_icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------------------- */
+
 .image,
 .no_image {
   height: 100px;
@@ -21,7 +154,6 @@
 }
 
 .options {
-  /* display: flex; */
   width: 100%;
 }
 
