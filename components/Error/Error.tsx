@@ -55,29 +55,11 @@ const Error = ({ error, setError }: Props) => {
     }, 150)
   }
 
-  // useEffect(() => {
-  //   const hideErrorModal = (e: any) => {
-  //     console.log(errorMsgRef.current!.contains(e.traget))
-  //     if (
-  //       errorMsgRef &&
-  //       errorMsgRef.current &&
-  //       !errorMsgRef.current.contains(e.traget)
-  //     ) {
-  //       errorMsgRef.current!.style.transform = 'scale(0)'
-  //       setTimeout(() => {
-  //         setError('')
-  //       }, 150)
-  //     }
-  //   }
-  //   document.body.addEventListener('click', hideErrorModal)
-
-  //   return () => document.body.removeEventListener('click', hideErrorModal)
-  // }, [])
-
   return (
     <div className={styles.error_div}>
       <div className={styles.error_msg} ref={errorMsgRef}>
-        <div>{error}</div>
+        <p className='font-bold'>ERROR!</p>
+        <p className='text-[#555]'>{error}</p>
         {/* <div className={styles.close_timer}>
           <p className={styles.timer}>
             <span className={styles.count}>Left : {count}s</span>

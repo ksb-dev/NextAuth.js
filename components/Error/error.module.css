@@ -6,7 +6,7 @@
   height: 100%;
   background: aqua;
   border-radius: var(--border-radius-1);
-  background: rgb(255, 255, 255, 0.75);
+  background: rgb(255, 255, 255, 0.8);
 
   display: flex;
   align-items: center;
@@ -16,9 +16,8 @@
 .error_msg {
   background: #fff;
   color: tomato;
-  padding: 2rem;
+  padding: 2rem 1rem;
 
-  font-weight: 500;
   font-size: 1rem;
   width: 286px;
 
@@ -39,7 +38,7 @@
   position: relative;
 }
 
-.close_timer {
+/* .close_timer {
   margin-top: 2rem;
   width: 100%;
   display: flex;
@@ -76,12 +75,12 @@
 
 .close:hover {
   filter: brightness(90%);
-}
+} */
 
 .close_btn {
   position: absolute;
-  top: -20px;
-  right: -20px;
+  top: -31px;
+  right: 112px;
   background: tomato;
   cursor: pointer;
   width: 62px;
@@ -96,10 +95,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
+  font-size: 1.25rem;
 }
 
 .close_btn:hover {
-  /* transform: rotate(20deg); */
   transform: scale(1.1);
   transition: var(--transition-1);
 }
@@ -112,6 +111,5 @@
   bottom: 0;
   left: 0;
   border-bottom-left-radius: var(--border-radius-1);
-  /* border-bottom-right-radius: var(--border-radius-1); */
   transition: all 10s ease-in;
 }

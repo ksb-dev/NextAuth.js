@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect } from 'react'
 
 // next-router
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
 
 // hooks
 import { useCheckFields } from '@/hooks/useCheckFields'
@@ -16,6 +15,7 @@ import Error from '@/components/Error/Error'
 
 // react-icons
 import { LiaHomeSolid } from 'react-icons/lia'
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 
 // styles
 import styles from './page.module.css'
@@ -31,6 +31,7 @@ const SignUp = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [firstMount, setFirstMount] = useState(false)
+  const [showPassword, setShowPassword] = useState('password')
 
   const registerFormRef = useRef<HTMLDivElement>(null)
   const nameRef = useRef<HTMLInputElement>(null)
@@ -38,6 +39,12 @@ const SignUp = () => {
   const passwordRef = useRef<HTMLInputElement>(null)
 
   const router = useRouter()
+
+  useEffect(() => {
+    if (data.password.length === 0) {
+      setShowPassword('password')
+    }
+  }, [data.password])
 
   useEffect(() => {
     if (registerFormRef && registerFormRef.current) {
@@ -140,11 +147,25 @@ const SignUp = () => {
             <input
               ref={passwordRef}
               id='password'
-              type='password'
+              type={showPassword}
               value={data.password}
               className='input'
               onChange={e => setData({ ...data, password: e.target.value })}
             />
+            {showPassword === 'password'
+              ? data.password && (
+                  <span className='eye' onClick={() => setShowPassword('text')}>
+                    <AiOutlineEyeInvisible />
+                  </span>
+                )
+              : data.password && (
+                  <span
+                    className='eye'
+                    onClick={() => setShowPassword('password')}
+                  >
+                    <AiOutlineEye />
+                  </span>
+                )}
           </div>
 
           <div className={styles.profile_upload}>

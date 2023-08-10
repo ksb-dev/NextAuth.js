@@ -17,6 +17,7 @@ import Error from '@/components/Error/Error'
 import { LiaHomeSolid } from 'react-icons/lia'
 import { AiFillGithub } from 'react-icons/ai'
 import { FcGoogle } from 'react-icons/fc'
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 
 import { signIn, useSession } from 'next-auth/react'
 
@@ -32,10 +33,17 @@ const Login = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [firstMount, setFirstMount] = useState(false)
+  const [showPassword, setShowPassword] = useState('password')
 
   const loginFormRef = useRef<HTMLDivElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const passwordRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    if (data.password.length === 0) {
+      setShowPassword('password')
+    }
+  }, [data.password])
 
   useEffect(() => {
     if (session) return router.push('/')
@@ -109,11 +117,29 @@ const Login = () => {
               <input
                 ref={passwordRef}
                 id='password'
-                type='password'
+                type={showPassword}
                 value={data.password}
                 className='input'
                 onChange={e => setData({ ...data, password: e.target.value })}
               />
+
+              {showPassword === 'password'
+                ? data.password && (
+                    <span
+                      className='eye'
+                      onClick={() => setShowPassword('text')}
+                    >
+                      <AiOutlineEyeInvisible />
+                    </span>
+                  )
+                : data.password && (
+                    <span
+                      className='eye'
+                      onClick={() => setShowPassword('password')}
+                    >
+                      <AiOutlineEye />
+                    </span>
+                  )}
             </div>
 
             <button className='submit_btn' onClick={handleLogin}>
