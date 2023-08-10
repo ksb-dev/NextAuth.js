@@ -164,7 +164,7 @@ const Login = () => {
                     <FcGoogle />
                   </span>
                 </div>
-                Sign in with Google
+                Login in with Google
               </div>
 
               <div className='github_div' onClick={() => signIn('github')}>
@@ -173,7 +173,7 @@ const Login = () => {
                     <AiFillGithub />
                   </span>
                 </div>
-                Sign in with GitHub
+                Login in with GitHub
               </div>
             </div>
           </div>
