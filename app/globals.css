@@ -205,15 +205,15 @@ body {
   background: #fff;
   display: inline-block;
   height: 37px;
-  width: 38px;
+  width: 37px;
   border-radius: var(--border-radius-1);
   position: absolute;
   left: 0.15rem;
 }
 
-.github_icon_div {
+/* .github_icon_div {
   height: 37px;
-}
+} */
 
 .google_icon,
 .github_icon {
